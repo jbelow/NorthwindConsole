@@ -1,0 +1,82 @@
+2020-11-09 08:25:36.3356|INFO|NorthwindConsole.Program|Program started
+2020-11-09 08:25:36.3678|INFO|NorthwindConsole.Program|Program ended
+2020-11-09 08:48:41.8701|INFO|NorthwindConsole.Program|Program started
+2020-11-09 08:51:34.5803|INFO|NorthwindConsole.Program|Program started
+2020-11-09 08:51:44.8229|INFO|NorthwindConsole.Program|Program ended
+2020-11-09 08:56:36.8896|INFO|NorthwindConsole.Program|Program started
+2020-11-09 08:56:40.3708|INFO|NorthwindConsole.Program|Option 1 selected
+2020-11-09 08:57:11.5945|INFO|NorthwindConsole.Program|Option q selected
+2020-11-09 08:57:11.5945|INFO|NorthwindConsole.Program|Program ended
+2020-11-09 08:57:14.6167|INFO|NorthwindConsole.Program|Program started
+2020-11-09 08:57:16.9510|INFO|NorthwindConsole.Program|Option 1 selected
+2020-11-09 08:57:32.6842|INFO|NorthwindConsole.Program|Option 1 selected
+2020-11-09 09:00:56.3067|INFO|NorthwindConsole.Program|Program started
+2020-11-09 09:00:57.8041|INFO|NorthwindConsole.Program|Option 2 selected
+2020-11-09 09:02:18.2121|INFO|NorthwindConsole.Program|Option 1 selected
+2020-11-09 09:05:37.1912|INFO|NorthwindConsole.Program|Program started
+2020-11-09 09:05:42.6334|INFO|NorthwindConsole.Program|Option 2 selected
+2020-11-09 09:06:17.8469|INFO|NorthwindConsole.Program|Program started
+2020-11-09 09:06:18.8041|INFO|NorthwindConsole.Program|Option 2 selected
+2020-11-09 09:06:20.4340|ERROR|NorthwindConsole.Program|CategoryName : The CategoryName field is required.
+2020-11-09 09:09:44.2315|INFO|NorthwindConsole.Program|Program started
+2020-11-09 09:09:45.8825|INFO|NorthwindConsole.Program|Option 2 selected
+2020-11-09 09:09:46.7582|ERROR|NorthwindConsole.Program|CategoryName : You didn't enter in a name!
+2020-11-09 09:12:00.1167|INFO|NorthwindConsole.Program|Program started
+2020-11-09 09:12:03.8984|INFO|NorthwindConsole.Program|Option 2 selected
+2020-11-09 09:12:12.7274|ERROR|NorthwindConsole.Program|CategoryName : Name exists
+2020-11-09 09:12:59.0613|INFO|NorthwindConsole.Program|Program started
+2020-11-09 09:13:01.0298|INFO|NorthwindConsole.Program|Option 1 selected
+2020-11-09 09:13:03.3021|INFO|NorthwindConsole.Program|Option 2 selected
+2020-11-09 09:13:16.0003|ERROR|NorthwindConsole.Program|CategoryName : Name already exists
+2020-11-09 09:15:11.0702|INFO|NorthwindConsole.Program|Program started
+2020-11-09 09:15:12.9871|INFO|NorthwindConsole.Program|Option 3 selected
+2020-11-09 09:15:18.8912|INFO|NorthwindConsole.Program|CategoryId 6 selected
+2020-11-09 09:15:33.0746|INFO|NorthwindConsole.Program|Option 3 selected
+2020-11-09 09:15:33.9921|INFO|NorthwindConsole.Program|CategoryId 1 selected
+2020-11-09 09:15:39.6447|INFO|NorthwindConsole.Program|Option 1 selected
+2020-11-09 09:16:09.5061|INFO|NorthwindConsole.Program|Option 3 selected
+2020-11-09 09:16:13.6731|INFO|NorthwindConsole.Program|CategoryId 4 selected
+2020-11-09 09:16:33.0181|INFO|NorthwindConsole.Program|Program started
+2020-11-09 09:16:34.9375|INFO|NorthwindConsole.Program|Option 3 selected
+2020-11-09 09:16:46.9581|INFO|NorthwindConsole.Program|Program started
+2020-11-09 09:16:53.9465|INFO|NorthwindConsole.Program|Option 3 selected
+2020-11-09 09:17:05.9581|INFO|NorthwindConsole.Program|CategoryId 1 selected
+2020-11-09 09:17:25.8840|INFO|NorthwindConsole.Program|Program started
+2020-11-09 09:17:34.4907|INFO|NorthwindConsole.Program|Option 3 selected
+2020-11-09 09:18:00.1292|INFO|NorthwindConsole.Program|Program started
+2020-11-09 09:18:14.5551|INFO|NorthwindConsole.Program|Option 3 selected
+2020-11-09 09:19:38.4568|INFO|NorthwindConsole.Program|Program started
+2020-11-09 09:19:41.5540|INFO|NorthwindConsole.Program|Option 3 selected
+2020-11-09 09:19:58.9410|INFO|NorthwindConsole.Program|CategoryId 1 selected
+2020-11-09 09:20:04.8321|INFO|NorthwindConsole.Program|Option 1 selected
+2020-11-09 09:22:27.4769|INFO|NorthwindConsole.Program|Program started
+2020-11-09 09:22:28.8401|INFO|NorthwindConsole.Program|Option 3 selected
+2020-11-09 09:22:31.3530|INFO|NorthwindConsole.Program|CategoryId 1 selected
+2020-11-09 09:22:48.7982|INFO|NorthwindConsole.Program|Option 3 selected
+2020-11-09 09:22:50.3663|INFO|NorthwindConsole.Program|CategoryId 2 selected
+2020-11-09 09:22:52.4921|INFO|NorthwindConsole.Program|Option 1 selected
+2020-11-09 09:23:16.5236|INFO|NorthwindConsole.Program|Program started
+2020-11-09 09:23:21.4079|INFO|NorthwindConsole.Program|Option 3 selected
+2020-11-09 09:23:24.7616|INFO|NorthwindConsole.Program|CategoryId 2 selected
+2020-11-09 09:23:37.0112|INFO|NorthwindConsole.Program|Option 3 selected
+2020-11-09 09:23:37.8591|INFO|NorthwindConsole.Program|CategoryId 1 selected
+2020-11-09 09:25:27.0197|INFO|NorthwindConsole.Program|Option q selected
+2020-11-09 09:25:27.0197|INFO|NorthwindConsole.Program|Program ended
+2020-11-09 09:25:32.4269|INFO|NorthwindConsole.Program|Program started
+2020-11-09 09:25:34.6282|INFO|NorthwindConsole.Program|Option 3 selected
+2020-11-09 09:25:36.7434|INFO|NorthwindConsole.Program|CategoryId 1 selected
+2020-11-09 09:26:10.7646|INFO|NorthwindConsole.Program|Program started
+2020-11-09 09:26:14.4167|INFO|NorthwindConsole.Program|Option 3 selected
+2020-11-09 09:26:28.9863|INFO|NorthwindConsole.Program|CategoryId 1 selected
+2020-11-09 09:26:42.0210|INFO|NorthwindConsole.Program|Option q selected
+2020-11-09 09:26:42.0210|INFO|NorthwindConsole.Program|Program ended
+2020-11-09 09:28:56.9715|INFO|NorthwindConsole.Program|Program started
+2020-11-09 09:28:58.2739|INFO|NorthwindConsole.Program|Option 3 selected
+2020-11-09 09:29:00.9384|INFO|NorthwindConsole.Program|CategoryId 2 selected
+2020-11-09 09:29:08.7317|INFO|NorthwindConsole.Program|Program started
+2020-11-09 09:29:09.4602|INFO|NorthwindConsole.Program|Option 3 selected
+2020-11-09 09:29:11.4486|INFO|NorthwindConsole.Program|CategoryId 1 selected
+2020-11-09 09:30:45.5563|INFO|NorthwindConsole.Program|Program started
+2020-11-09 09:30:47.5339|INFO|NorthwindConsole.Program|Option 4 selected
+2020-11-09 09:34:30.3700|INFO|NorthwindConsole.Program|Program started
+2020-11-09 09:34:58.0139|INFO|NorthwindConsole.Program|Program started
