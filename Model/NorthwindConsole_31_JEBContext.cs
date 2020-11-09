@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.Extensions.Configuration;
 
-namespace NorthwindConsole.Mode
+namespace NorthwindConsole.Model
 {
     public partial class NorthwindConsole_31_JEBContext : DbContext
     {

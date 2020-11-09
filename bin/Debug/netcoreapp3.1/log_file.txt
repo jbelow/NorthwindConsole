@@ -80,3 +80,5 @@
 2020-11-09 09:30:47.5339|INFO|NorthwindConsole.Program|Option 4 selected
 2020-11-09 09:34:30.3700|INFO|NorthwindConsole.Program|Program started
 2020-11-09 09:34:58.0139|INFO|NorthwindConsole.Program|Program started
+2020-11-09 09:52:59.7679|INFO|NorthwindConsole.Program|Program started
+2020-11-09 09:53:01.5336|INFO|NorthwindConsole.Program|Option 4 selected

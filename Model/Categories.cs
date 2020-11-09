@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace NorthwindConsole.Mode
+namespace NorthwindConsole.Model
 {
     public partial class Categories
     {

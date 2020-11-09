@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace NorthwindConsole.Mode
+namespace NorthwindConsole.Model
 {
     public partial class Employees
     {

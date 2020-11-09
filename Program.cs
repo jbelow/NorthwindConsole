@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using NLog.Web;
-using NorthwindConsole.Mode;
+using NorthwindConsole.Model;
 
 /*
 link to the project start files from Jeff:
