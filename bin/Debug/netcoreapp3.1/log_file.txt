@@ -110,3 +110,14 @@
 2020-11-18 21:12:09.9804|INFO|NorthwindConsole.Program|Option 2 selected
 2020-11-18 21:12:16.9377|INFO|NorthwindConsole.Program|Validation passed
 2020-11-18 21:12:20.2602|INFO|NorthwindConsole.Program|Option 1 selected
+2020-11-18 21:17:34.3636|INFO|NorthwindConsole.Program|Program started
+2020-11-18 21:17:36.0803|INFO|NorthwindConsole.Program|Option 1 selected
+2020-11-18 21:17:37.9689|INFO|NorthwindConsole.Program|Option 1 selected
+2020-11-18 21:17:38.7819|INFO|NorthwindConsole.Program|Option 1 selected
+2020-11-18 21:17:40.0672|INFO|NorthwindConsole.Program|Option 2 selected
+2020-11-18 21:17:41.2176|ERROR|NorthwindConsole.Program|CategoryName : You didn't enter in a category name!
+2020-11-18 21:17:44.6414|INFO|NorthwindConsole.Program|Option 3 selected
+2020-11-18 21:17:46.1932|INFO|NorthwindConsole.Program|CategoryId 1 selected
+2020-11-18 21:20:00.1270|INFO|NorthwindConsole.Program|Option 3 selected
+2020-11-18 21:20:02.4958|INFO|NorthwindConsole.Program|CategoryId 1 selected
+2020-11-18 21:20:04.1264|INFO|NorthwindConsole.Program|Option 4 selected
