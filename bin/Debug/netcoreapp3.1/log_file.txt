@@ -82,3 +82,31 @@
 2020-11-09 09:34:58.0139|INFO|NorthwindConsole.Program|Program started
 2020-11-09 09:52:59.7679|INFO|NorthwindConsole.Program|Program started
 2020-11-09 09:53:01.5336|INFO|NorthwindConsole.Program|Option 4 selected
+2020-11-18 20:59:26.0616|INFO|NorthwindConsole.Program|Program started
+2020-11-18 20:59:31.0453|INFO|NorthwindConsole.Program|Option 1 selected
+2020-11-18 20:59:34.7000|INFO|NorthwindConsole.Program|Option 2 selected
+2020-11-18 20:59:43.0502|INFO|NorthwindConsole.Program|Validation passed
+2020-11-18 20:59:44.5317|INFO|NorthwindConsole.Program|Option 1 selected
+2020-11-18 21:00:06.8147|INFO|NorthwindConsole.Program|Program started
+2020-11-18 21:00:38.2187|INFO|NorthwindConsole.Program|Option 2 selected
+2020-11-18 21:00:45.0309|ERROR|NorthwindConsole.Program|CategoryName : Name already exists
+2020-11-18 21:00:48.5087|INFO|NorthwindConsole.Program|Option 2 selected
+2020-11-18 21:00:55.8792|INFO|NorthwindConsole.Program|Validation passed
+2020-11-18 21:02:16.9734|INFO|NorthwindConsole.Program|Program started
+2020-11-18 21:02:18.4369|INFO|NorthwindConsole.Program|Option 2 selected
+2020-11-18 21:02:19.9565|ERROR|NorthwindConsole.Program|CategoryName : You didn't enter in a category name!
+2020-11-18 21:09:44.8329|INFO|NorthwindConsole.Program|Program started
+2020-11-18 21:09:46.6615|INFO|NorthwindConsole.Program|Option 2 selected
+2020-11-18 21:09:50.5568|INFO|NorthwindConsole.Program|Validation passed
+2020-11-18 21:10:18.7178|INFO|NorthwindConsole.Program|Program started
+2020-11-18 21:10:24.8679|INFO|NorthwindConsole.Program|Option 2 selected
+2020-11-18 21:10:27.7046|INFO|NorthwindConsole.Program|Validation passed
+2020-11-18 21:10:43.0071|INFO|NorthwindConsole.Program|Program started
+2020-11-18 21:10:45.2639|INFO|NorthwindConsole.Program|Option 2 selected
+2020-11-18 21:10:54.0369|INFO|NorthwindConsole.Program|Validation passed
+2020-11-18 21:10:58.2482|INFO|NorthwindConsole.Program|Option 1 selected
+2020-11-18 21:12:00.7869|INFO|NorthwindConsole.Program|Program started
+2020-11-18 21:12:02.0489|INFO|NorthwindConsole.Program|Option 1 selected
+2020-11-18 21:12:09.9804|INFO|NorthwindConsole.Program|Option 2 selected
+2020-11-18 21:12:16.9377|INFO|NorthwindConsole.Program|Validation passed
+2020-11-18 21:12:20.2602|INFO|NorthwindConsole.Program|Option 1 selected
