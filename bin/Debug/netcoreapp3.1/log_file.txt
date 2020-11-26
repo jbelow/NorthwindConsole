@@ -121,3 +121,91 @@
 2020-11-18 21:20:00.1270|INFO|NorthwindConsole.Program|Option 3 selected
 2020-11-18 21:20:02.4958|INFO|NorthwindConsole.Program|CategoryId 1 selected
 2020-11-18 21:20:04.1264|INFO|NorthwindConsole.Program|Option 4 selected
+2020-11-26 10:12:12.0164|INFO|NorthwindConsole.Program|Program started
+2020-11-26 10:13:24.9653|INFO|NorthwindConsole.Program|Option 5 selected
+2020-11-26 10:24:16.3891|INFO|NorthwindConsole.Program|Program started
+2020-11-26 10:24:18.2832|INFO|NorthwindConsole.Program|Option 1 selected
+2020-11-26 10:44:42.2190|INFO|NorthwindConsole.Program|Program started
+2020-11-26 10:44:46.4880|INFO|NorthwindConsole.Program|Option 2 selected
+2020-11-26 10:44:52.4353|INFO|NorthwindConsole.Program|Validation passed
+2020-11-26 10:45:04.4832|INFO|NorthwindConsole.Program|Option 2 selected
+2020-11-26 10:45:08.6635|ERROR|NorthwindConsole.Program|CategoryName : Name already exists
+2020-11-26 10:47:42.3512|INFO|NorthwindConsole.Program|Program started
+2020-11-26 10:53:04.5566|INFO|NorthwindConsole.Program|Program started
+2020-11-26 10:53:09.5400|INFO|NorthwindConsole.Program|Option 2 selected
+2020-11-26 10:53:14.5383|INFO|NorthwindConsole.Program|Program started
+2020-11-26 10:53:16.8363|INFO|NorthwindConsole.Program|Option 3 selected
+2020-11-26 10:53:21.7388|INFO|NorthwindConsole.Program|CategoryId 1 selected
+2020-11-26 10:53:43.8854|INFO|NorthwindConsole.Program|Option 3 selected
+2020-11-26 10:53:47.5349|INFO|NorthwindConsole.Program|CategoryId 7 selected
+2020-11-26 10:53:54.2903|INFO|NorthwindConsole.Program|Option 3 selected
+2020-11-26 10:53:57.3734|INFO|NorthwindConsole.Program|CategoryId 9 selected
+2020-11-26 10:54:02.6406|INFO|NorthwindConsole.Program|Option 3 selected
+2020-11-26 10:54:04.4354|INFO|NorthwindConsole.Program|CategoryId 2 selected
+2020-11-26 10:54:07.2922|INFO|NorthwindConsole.Program|Option 1 selected
+2020-11-26 10:54:51.5653|INFO|NorthwindConsole.Program|Program started
+2020-11-26 10:54:53.0273|INFO|NorthwindConsole.Program|Option 1 selected
+2020-11-26 10:59:19.6494|INFO|NorthwindConsole.Program|Program started
+2020-11-26 10:59:21.8596|INFO|NorthwindConsole.Program|Option 1 selected
+2020-11-26 10:59:53.9140|INFO|NorthwindConsole.Program|Program started
+2020-11-26 10:59:55.0576|INFO|NorthwindConsole.Program|Option 1 selected
+2020-11-26 11:00:08.8821|INFO|NorthwindConsole.Program|Program started
+2020-11-26 11:00:10.1074|INFO|NorthwindConsole.Program|Option 1 selected
+2020-11-26 11:00:35.7366|INFO|NorthwindConsole.Program|Program started
+2020-11-26 11:00:37.3881|INFO|NorthwindConsole.Program|Option 1 selected
+2020-11-26 11:17:22.1502|INFO|NorthwindConsole.Program|Option 5 selected
+2020-11-26 11:17:36.6452|INFO|NorthwindConsole.Program|Validation passed
+2020-11-26 11:17:36.8361|ERROR|NorthwindConsole.Program|An error occurred while updating the entries. See the inner exception for details.
+2020-11-26 11:17:36.8431|INFO|NorthwindConsole.Program|Program ended
+2020-11-26 11:20:26.4154|INFO|NorthwindConsole.Program|Program started
+2020-11-26 11:20:53.6365|INFO|NorthwindConsole.Program|Option 5 selected
+2020-11-26 11:20:56.0023|ERROR|NorthwindConsole.Program|CategoryName : You didn't enter in a category name!
+2020-11-26 11:21:41.8736|INFO|NorthwindConsole.Program|Program started
+2020-11-26 11:21:42.8254|INFO|NorthwindConsole.Program|Option 5 selected
+2020-11-26 11:21:46.4663|ERROR|NorthwindConsole.Program|CategoryName : You didn't enter in a category name!
+2020-11-26 11:22:07.6166|INFO|NorthwindConsole.Program|Program started
+2020-11-26 11:22:10.1063|INFO|NorthwindConsole.Program|Option 5 selected
+2020-11-26 11:22:14.7582|ERROR|NorthwindConsole.Program|CategoryName : You didn't enter in a category name!
+2020-11-26 11:23:50.0883|INFO|NorthwindConsole.Program|Program started
+2020-11-26 11:23:52.8384|INFO|NorthwindConsole.Program|Option 5 selected
+2020-11-26 11:23:56.5875|ERROR|NorthwindConsole.Program|CategoryName : You didn't enter in a category name!
+2020-11-26 11:27:12.1579|INFO|NorthwindConsole.Program|Program started
+2020-11-26 11:27:13.0941|INFO|NorthwindConsole.Program|Option 5 selected
+2020-11-26 11:27:20.0599|ERROR|NorthwindConsole.Program|CategoryName : You didn't enter in a category name!
+2020-11-26 11:27:51.3143|INFO|NorthwindConsole.Program|Program started
+2020-11-26 11:27:54.9232|INFO|NorthwindConsole.Program|Option 5 selected
+2020-11-26 11:28:04.4105|ERROR|NorthwindConsole.Program|CategoryName : You didn't enter in a category name!
+2020-11-26 11:29:57.8672|INFO|NorthwindConsole.Program|Program started
+2020-11-26 11:29:58.6029|INFO|NorthwindConsole.Program|Option 5 selected
+2020-11-26 11:30:00.6892|ERROR|NorthwindConsole.Program|CategoryName : You didn't enter in a category name!
+2020-11-26 11:30:10.0848|INFO|NorthwindConsole.Program|Program started
+2020-11-26 11:30:12.3141|INFO|NorthwindConsole.Program|Option 5 selected
+2020-11-26 11:30:14.1372|ERROR|NorthwindConsole.Program|CategoryName : You didn't enter in a category name!
+2020-11-26 11:31:13.4733|INFO|NorthwindConsole.Program|Program started
+2020-11-26 11:31:15.7305|INFO|NorthwindConsole.Program|Option 5 selected
+2020-11-26 11:31:18.1902|ERROR|NorthwindConsole.Program|CategoryName : You didn't enter in a category name!
+2020-11-26 11:35:38.8686|INFO|NorthwindConsole.Program|Program started
+2020-11-26 11:35:41.8542|INFO|NorthwindConsole.Program|Option 5 selected
+2020-11-26 11:39:23.9261|INFO|NorthwindConsole.Program|Program started
+2020-11-26 11:39:26.0456|INFO|NorthwindConsole.Program|Option 5 selected
+2020-11-26 11:39:28.4726|ERROR|NorthwindConsole.Program|Category Id doesn't match anything in the database
+2020-11-26 11:40:08.9395|INFO|NorthwindConsole.Program|Option 5 selected
+2020-11-26 11:40:09.9276|ERROR|NorthwindConsole.Program|Category Id doesn't match anything in the database
+2020-11-26 11:41:15.4224|INFO|NorthwindConsole.Program|Program started
+2020-11-26 11:41:16.0276|INFO|NorthwindConsole.Program|Option 5 selected
+2020-11-26 11:41:18.7225|INFO|NorthwindConsole.Program|Category picked successfully!
+2020-11-26 11:41:28.8309|INFO|NorthwindConsole.Program|Program started
+2020-11-26 11:41:31.3950|INFO|NorthwindConsole.Program|Option 5 selected
+2020-11-26 11:41:33.6822|ERROR|NorthwindConsole.Program|Category Id doesn't match anything in the database
+2020-11-26 11:43:37.9596|INFO|NorthwindConsole.Program|Program started
+2020-11-26 11:43:38.5143|INFO|NorthwindConsole.Program|Option 5 selected
+2020-11-26 11:43:40.3988|ERROR|NorthwindConsole.Program|Input string was not in a correct format.
+2020-11-26 11:43:40.4076|INFO|NorthwindConsole.Program|Program ended
+2020-11-26 11:43:56.1588|INFO|NorthwindConsole.Program|Program started
+2020-11-26 11:43:57.3867|INFO|NorthwindConsole.Program|Option 5 selected
+2020-11-26 11:43:59.4725|ERROR|NorthwindConsole.Program|Input string was not in a correct format.
+2020-11-26 11:43:59.4725|INFO|NorthwindConsole.Program|Program ended
+2020-11-26 11:44:32.0796|INFO|NorthwindConsole.Program|Program started
+2020-11-26 11:44:35.0405|INFO|NorthwindConsole.Program|Option 5 selected
+2020-11-26 11:44:37.8648|ERROR|NorthwindConsole.Program|Input string was not in a correct format.
+2020-11-26 11:44:37.8737|INFO|NorthwindConsole.Program|Program ended

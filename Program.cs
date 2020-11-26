@@ -42,19 +42,12 @@ namespace NorthwindConsole
                     logger.Info($"Option {choice} selected");
                     //moved var db here because it was needless in every if statment
                     var db = new NorthwindConsole_31_JEBContext();
+                    //Display Categories
                     if (choice == "1")
                     {
-                        var query = db.Categories.OrderBy(p => p.CategoryName);
-
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine($"{query.Count()} records returned");
-                        Console.ForegroundColor = ConsoleColor.Magenta;
-                        foreach (var item in query)
-                        {
-                            Console.WriteLine($"{item.CategoryName} - {item.Description}");
-                        }
-                        Console.ForegroundColor = ConsoleColor.White;
+                        DisplayCategories(db);
                     }
+                    //Add a new Category
                     else if (choice == "2")
                     {
                         Categories category = new Categories();
@@ -80,7 +73,6 @@ namespace NorthwindConsole
                             else
                             {
                                 logger.Info("Validation passed");
-                                // TODO: save category to db
                                 Console.WriteLine(category.CategoryName + " " + category.Description);
                                 db.Categories.Add(category);
                                 db.SaveChanges();
@@ -94,6 +86,7 @@ namespace NorthwindConsole
                             }
                         }
                     }
+                    //Display Category and related products
                     else if (choice == "3")
                     {
                         var query = db.Categories.OrderBy(p => p.CategoryId);
@@ -118,6 +111,7 @@ namespace NorthwindConsole
                             Console.WriteLine(p.ProductName);
                         }
                     }
+                    //Display all Categories and their related products
                     else if (choice == "4")
                     {
                         var query = db.Categories.Include("Products").OrderBy(p => p.CategoryId);
@@ -130,44 +124,44 @@ namespace NorthwindConsole
                             }
                         }
                     }
+                    //Add a new Product
                     else if (choice == "5")
                     {
                         //add a new product
+                        Categories category = new Categories();
                         Products product = new Products();
-                        Console.WriteLine("Enter Product Name:");
-                        product.ProductName = Console.ReadLine();
-                        Console.WriteLine("Enter the Product quantity per unit:");
-                        product.QuantityPerUnit = Console.ReadLine();
-
-                        ValidationContext context = new ValidationContext(product, null, null);
-                        List<ValidationResult> results = new List<ValidationResult>();
+                        DisplayCategories(db);
+                        Console.WriteLine("Enter the category ID for this product:");
+                        product.CategoryId = Int32.Parse(Console.ReadLine());
 
                         //this is just a bool and gets as asigned on run like in js 
-                        var isValid = Validator.TryValidateObject(product, context, results, true);
-                        if (isValid)
                         {
-                            // check for unique name
-                            if (db.Products.Any(c => c.ProductName == product.ProductName))
+                            // check if id is real
+                            if (db.Categories.Any(c => c.CategoryId == product.CategoryId))
                             {
-                                // generate validation error
-                                isValid = false;
-                                results.Add(new ValidationResult("Name already exists", new string[] { "ProductName" }));
+                                logger.Info("Category picked successfully!");
+
+                                Console.WriteLine("Enter Product Name:");
+                                product.ProductName = Console.ReadLine();
+
+                                if (db.Products.Any(c => c.ProductName != product.ProductName))
+                                {
+
+                                }
+                                else
+                                {
+                                logger.Error("Entered Product Name is the same as an  existing Product Name");
+                                }
+                                Console.WriteLine("Enter the Product quantity per unit:");
+                                product.QuantityPerUnit = Console.ReadLine();
                             }
                             else
                             {
-                                logger.Info("Validation passed");
-                                //save product to db
-                                db.Products.Add(product);
-                                db.SaveChanges();
+                                logger.Error("Entered Categories Id doesn't match any Id in Categories");
+
                             }
                         }
-                        if (!isValid)
-                        {
-                            foreach (var result in results)
-                            {
-                                logger.Error($"{result.MemberNames.First()} : {result.ErrorMessage}");
-                            }
-                        }
+
 
                     }
                     Console.WriteLine();
@@ -182,6 +176,20 @@ namespace NorthwindConsole
             logger.Info("Program ended");
         }
 
+        //display categories method - so that it can be reused
+        private static void DisplayCategories(NorthwindConsole_31_JEBContext db)
+        {
+            var query = db.Categories.OrderBy(p => p.CategoryId);
+
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine($"{query.Count()} records returned");
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            foreach (var item in query)
+            {
+                Console.WriteLine(String.Format("{0,-10} | {1,-10} {2,-10}", $"ID: {item.CategoryId}", $"Name: {item.CategoryName}", $"- {item.Description}"));
+            }
+            Console.ForegroundColor = ConsoleColor.White;
+        }
 
 
     }
