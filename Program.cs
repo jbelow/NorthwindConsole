@@ -38,7 +38,6 @@ namespace NorthwindConsole
                     Console.WriteLine("6) Display Products");
                     Console.WriteLine("7) Edit a Product");
                     Console.WriteLine("8) Edit a Category");
-                    Console.WriteLine("9) Display a Category");
                     Console.WriteLine("\"q\" to quit");
                     choice = Console.ReadLine();
                     Console.Clear();
@@ -366,31 +365,6 @@ namespace NorthwindConsole
                         else
                         {
                             logger.Error("The Category Id you entered does not exist.");
-                        }
-                    }
-
-                    else if (choice == "9")
-                    {
-                        var query = db.Categories.OrderBy(p => p.CategoryId);
-
-                        Console.WriteLine("Select the category whose products you want to display:");
-                        Console.ForegroundColor = ConsoleColor.DarkRed;
-                        foreach (var item in query)
-                        {
-                            Console.WriteLine($"{item.CategoryId}) {item.CategoryName}");
-                        }
-                        Console.ForegroundColor = ConsoleColor.White;
-                        int id = int.Parse(Console.ReadLine());
-                        Console.Clear();
-                        logger.Info($"CategoryId {id} selected");
-
-                        // Categories category = db.Categories.FirstOrDefault(c => c.CategoryId == id);
-                        Categories category = db.Categories.Include("Products").FirstOrDefault(c => c.CategoryId == id);
-                        Console.WriteLine($"{category.CategoryName} - {category.Description}");
-
-                        foreach (Products p in category.Products.Where(p => p.Discontinued == false))
-                        {
-                            Console.WriteLine(p.ProductName);
                         }
                     }
 
