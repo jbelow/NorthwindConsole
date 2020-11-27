@@ -131,39 +131,72 @@ namespace NorthwindConsole
                         Categories category = new Categories();
                         Products product = new Products();
                         DisplayCategories(db);
-                        Console.WriteLine("Enter the category ID for this product:");
+                        Console.WriteLine("Enter the Category Id for this product:");
                         product.CategoryId = Int32.Parse(Console.ReadLine());
-
-                        //this is just a bool and gets as asigned on run like in js 
+                        // check if id is real
+                        if (db.Categories.Any(c => c.CategoryId == product.CategoryId))
                         {
-                            // check if id is real
-                            if (db.Categories.Any(c => c.CategoryId == product.CategoryId))
+                            DisplaySuppliers(db);
+                            Console.WriteLine("Enter the Supplier Id for this product:");
+                            product.SupplierId = Int32.Parse(Console.ReadLine());
+                            if (db.Suppliers.Any(c => c.SupplierId == product.SupplierId))
                             {
-                                logger.Info("Category picked successfully!");
-
                                 Console.WriteLine("Enter Product Name:");
                                 product.ProductName = Console.ReadLine();
 
                                 if (db.Products.Any(c => c.ProductName != product.ProductName))
                                 {
+                                    Console.WriteLine("Enter the Product quantity per unit:");
+                                    product.QuantityPerUnit = Console.ReadLine();
 
+                                    Console.WriteLine("Enter the Product unit price");
+                                    product.UnitPrice = decimal.Round(decimal.Parse(Console.ReadLine()), 2);
+
+                                    //auto setting these vaules because there shouldn't be any data on them yet
+                                    product.UnitsInStock = 0;
+                                    product.UnitsOnOrder = 0;
+                                    product.ReorderLevel = 0;
+                                    product.Discontinued = false;
+
+                                    db.Products.Add(product);
+                                    db.SaveChanges();
+                                    Console.WriteLine("New product: " + product.ProductName + " - has been added!");
                                 }
                                 else
                                 {
-                                logger.Error("Entered Product Name is the same as an  existing Product Name");
+                                    logger.Error("Entered Product Name is the same as an existing Product Name");
                                 }
-                                Console.WriteLine("Enter the Product quantity per unit:");
-                                product.QuantityPerUnit = Console.ReadLine();
                             }
                             else
                             {
-                                logger.Error("Entered Categories Id doesn't match any Id in Categories");
-
+                                logger.Error("Entered Supplier Id doesn't match any Id in Supplier");
                             }
+                        }
+                        else
+                        {
+                            logger.Error("Entered Categories Id doesn't match any Id in Categories");
                         }
 
 
+
                     }
+                    else if (choice == "6")
+                    {
+
+                        Console.WriteLine("1) Display all products");
+                        Console.WriteLine("2) Display active products");
+                        Console.WriteLine("3) Display discontinued products");
+                        choice = Console.ReadLine();
+                        Console.Clear();
+
+                        switch (choice)
+                        {
+
+                            default:
+                        }
+
+                    }
+
                     Console.WriteLine();
 
                 } while (choice.ToLower() != "q");
@@ -191,6 +224,42 @@ namespace NorthwindConsole
             Console.ForegroundColor = ConsoleColor.White;
         }
 
+        private static void DisplaySuppliers(NorthwindConsole_31_JEBContext db)
+        {
+
+            var query = db.Suppliers.OrderBy(p => p.SupplierId);
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine($"{query.Count()} records returned");
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            foreach (var item in query)
+            {
+                Console.WriteLine(String.Format("{0,-10} | {1,-10}", $"ID: {item.SupplierId}", $"Name: {item.CompanyName}"));
+            }
+            Console.ForegroundColor = ConsoleColor.White;
+        }
+
+        private static void DisplayAllProducts(NorthwindConsole_31_JEBContext db)
+        {
+
+            var query = db.Products.OrderBy(p => p.Discontinued);
+            Console.WriteLine($"{query.Count()} records returned");
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            foreach (var item in query)
+            {
+                if (item.Discontinued == true)
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine($"Product Name: {item.ProductName}");
+
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.WriteLine($"Discontinued Product Name: {item.ProductName}");
+                }
+            }
+            Console.ForegroundColor = ConsoleColor.White;
+        }
 
     }
 }

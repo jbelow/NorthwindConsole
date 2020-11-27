@@ -209,3 +209,23 @@
 2020-11-26 11:44:35.0405|INFO|NorthwindConsole.Program|Option 5 selected
 2020-11-26 11:44:37.8648|ERROR|NorthwindConsole.Program|Input string was not in a correct format.
 2020-11-26 11:44:37.8737|INFO|NorthwindConsole.Program|Program ended
+2020-11-26 12:19:41.2068|INFO|NorthwindConsole.Program|Program started
+2020-11-26 12:19:45.5084|INFO|NorthwindConsole.Program|Option 5 selected
+2020-11-26 12:19:48.8630|ERROR|NorthwindConsole.Program|Entered Categories Id doesn't match any Id in Categories
+2020-11-26 12:19:52.6365|INFO|NorthwindConsole.Program|Option 5 selected
+2020-11-26 12:20:06.7944|INFO|NorthwindConsole.Program|Program started
+2020-11-26 12:20:08.6638|INFO|NorthwindConsole.Program|Option 5 selected
+2020-11-26 12:20:35.5012|INFO|NorthwindConsole.Program|Program started
+2020-11-26 12:20:36.7831|INFO|NorthwindConsole.Program|Option 5 selected
+2020-11-26 12:20:41.4433|ERROR|NorthwindConsole.Program|Entered Categories Id doesn't match any Id in Categories
+2020-11-26 12:21:11.4583|INFO|NorthwindConsole.Program|Program started
+2020-11-26 12:21:12.7435|INFO|NorthwindConsole.Program|Option 5 selected
+2020-11-26 12:21:20.1676|ERROR|NorthwindConsole.Program|Entered Supplier Id doesn't match any Id in Supplier
+2020-11-26 12:21:23.3425|INFO|NorthwindConsole.Program|Option 5 selected
+2020-11-26 12:21:43.6324|ERROR|NorthwindConsole.Program|Input string was not in a correct format.
+2020-11-26 12:21:43.6408|INFO|NorthwindConsole.Program|Program ended
+2020-11-26 12:27:45.3757|INFO|NorthwindConsole.Program|Program started
+2020-11-26 12:27:46.9336|INFO|NorthwindConsole.Program|Option 5 selected
+2020-11-26 12:28:35.1235|INFO|NorthwindConsole.Program|Program started
+2020-11-26 12:28:37.6404|INFO|NorthwindConsole.Program|Option 3 selected
+2020-11-26 12:28:40.8897|INFO|NorthwindConsole.Program|CategoryId 9 selected
