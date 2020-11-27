@@ -37,6 +37,8 @@ namespace NorthwindConsole
                     Console.WriteLine("5) Add a new Product");
                     Console.WriteLine("6) Display Products");
                     Console.WriteLine("7) Edit a Product");
+                    Console.WriteLine("8) Edit a Category");
+                    Console.WriteLine("9) Display a Category");
                     Console.WriteLine("\"q\" to quit");
                     choice = Console.ReadLine();
                     Console.Clear();
@@ -108,7 +110,7 @@ namespace NorthwindConsole
                         Categories category = db.Categories.Include("Products").FirstOrDefault(c => c.CategoryId == id);
                         Console.WriteLine($"{category.CategoryName} - {category.Description}");
 
-                        foreach (Products p in category.Products)
+                        foreach (Products p in category.Products.Where(p => p.Discontinued == false))
                         {
                             Console.WriteLine(p.ProductName);
                         }
@@ -186,9 +188,10 @@ namespace NorthwindConsole
                     else if (choice == "6")
                     {
                         int displayChoice;
-                        Console.WriteLine("1) Display all products");
-                        Console.WriteLine("2) Display active products");
-                        Console.WriteLine("3) Display discontinued products");
+                        Console.WriteLine("1) Display all Products");
+                        Console.WriteLine("2) Display Active Products");
+                        Console.WriteLine("3) Display Discontinued Products");
+                        Console.WriteLine("4) Display a specific Product");
                         displayChoice = int.Parse(Console.ReadLine());
                         Console.Clear();
 
@@ -206,6 +209,10 @@ namespace NorthwindConsole
                                 DisplayDiscontinuedProducts(db);
                                 break;
 
+                            case 4:
+                                DisplaySpecificProduct(db);
+                                break;
+
                             default:
                                 logger.Error("You didn't pick of the options");
                                 break;
@@ -214,8 +221,7 @@ namespace NorthwindConsole
                     //Edit a Product
                     else if (choice == "7")
                     {
-                        //TODO: check to make sure the user doesn't enter null
-                        //finish the thing and link it with the method in Model/NorthwindConsole_31_JEBContext
+
                         Products product = new Products();
 
                         Console.WriteLine("Enter the id of the product you want to edit:");
@@ -223,6 +229,9 @@ namespace NorthwindConsole
 
                         if (db.Products.Any(c => c.ProductId == product.ProductId))
                         {
+                            //TODO: need to first set everything to it's default or else it will be overwirted as null if I don't put anything in
+                            // product = db.Products.Where(c => c.ProductId == product.ProductId);
+
                             Console.WriteLine("Do you want to change the Product Name Y | N");
                             choice = Console.ReadLine().ToLower();
                             if (choice == "y")
@@ -320,6 +329,73 @@ namespace NorthwindConsole
                         }
 
                     }
+                    //Edit a Category
+                    else if (choice == "8")
+                    {
+                        Categories category = new Categories();
+
+                        Console.WriteLine("Enter the id of the category you want to edit:");
+                        category.CategoryId = int.Parse(Console.ReadLine());
+
+                        if (db.Categories.Any(c => c.CategoryId == category.CategoryId))
+                        {
+                            //TODO: need to first set everything to it's default or else it will be overwirted as null if I don't put anything in
+                            // category = db.Categories.Where(c => c.CategoryId == category.CategoryId);
+
+                            Console.WriteLine("Do you want to change the Category Name Y | N");
+                            choice = Console.ReadLine().ToLower();
+                            if (choice == "y")
+                            {
+                                Console.WriteLine("Enter new name:");
+                                category.CategoryName = Console.ReadLine();
+                            }
+
+                            Console.WriteLine("Do you want to change the Supplier Id Y | N");
+                            choice = Console.ReadLine().ToLower();
+                            if (choice == "y")
+                            {
+                                Console.WriteLine("Enter new Discription:");
+                                category.Description = Console.ReadLine();
+                            }
+
+                            //TODO make the edit
+                            // db.EditCategory(category);
+                            logger.Info($"Category {category.CategoryId} has been updated!");
+
+                        }
+                        else
+                        {
+                            logger.Error("The Category Id you entered does not exist.");
+                        }
+                    }
+
+                    else if (choice == "9")
+                    {
+                        var query = db.Categories.OrderBy(p => p.CategoryId);
+
+                        Console.WriteLine("Select the category whose products you want to display:");
+                        Console.ForegroundColor = ConsoleColor.DarkRed;
+                        foreach (var item in query)
+                        {
+                            Console.WriteLine($"{item.CategoryId}) {item.CategoryName}");
+                        }
+                        Console.ForegroundColor = ConsoleColor.White;
+                        int id = int.Parse(Console.ReadLine());
+                        Console.Clear();
+                        logger.Info($"CategoryId {id} selected");
+
+                        // Categories category = db.Categories.FirstOrDefault(c => c.CategoryId == id);
+                        Categories category = db.Categories.Include("Products").FirstOrDefault(c => c.CategoryId == id);
+                        Console.WriteLine($"{category.CategoryName} - {category.Description}");
+
+                        foreach (Products p in category.Products.Where(p => p.Discontinued == false))
+                        {
+                            Console.WriteLine(p.ProductName);
+                        }
+                    }
+
+
+
                     Console.WriteLine();
 
                 } while (choice.ToLower() != "q");
@@ -413,7 +489,42 @@ namespace NorthwindConsole
             Console.ForegroundColor = ConsoleColor.White;
         }
 
+        private static void DisplaySpecificProduct(NorthwindConsole_31_JEBContext db)
+        {
 
+            int inputId;
+
+            Console.WriteLine("Enter the id of the product you want to view:");
+            inputId = int.Parse(Console.ReadLine());
+
+            if (db.Products.Any(c => c.ProductId == inputId))
+            {
+                var query = db.Products.Where(p => p.ProductId == inputId);
+                Console.ForegroundColor = ConsoleColor.Magenta;
+
+                foreach (var item in query)
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine($"Id: {item.ProductId}");
+                    Console.WriteLine($"Name: {item.ProductName}");
+                    Console.WriteLine($"SupplierId: {item.SupplierId}");
+                    Console.WriteLine($"CategoryId: {item.CategoryId}");
+                    Console.WriteLine($"QuantityPerUnit: {item.QuantityPerUnit}");
+                    Console.WriteLine($"UnitPrice: {item.UnitPrice}");
+                    Console.WriteLine($"UnitsInStock: {item.UnitsInStock}");
+                    Console.WriteLine($"UnitsOnOrder: {item.UnitsOnOrder}");
+                    Console.WriteLine($"ReorderLevel: {item.ReorderLevel}");
+                    Console.WriteLine($"Discontinued: {item.Discontinued}");
+
+                }
+                Console.ForegroundColor = ConsoleColor.White;
+            }
+            else
+            {
+                logger.Info("There is no Product with that Id");
+            }
+
+        }
 
     }
 }
