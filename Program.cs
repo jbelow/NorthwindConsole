@@ -35,6 +35,7 @@ namespace NorthwindConsole
                     Console.WriteLine("3) Display Category and related products");
                     Console.WriteLine("4) Display all Categories and their related products");
                     Console.WriteLine("5) Add a new Product");
+                    Console.WriteLine("6) Display Products");
                     Console.WriteLine("\"q\" to quit");
                     choice = Console.ReadLine();
                     Console.Clear();
@@ -182,17 +183,31 @@ namespace NorthwindConsole
                     }
                     else if (choice == "6")
                     {
-
+                        int displayChoice;
                         Console.WriteLine("1) Display all products");
                         Console.WriteLine("2) Display active products");
                         Console.WriteLine("3) Display discontinued products");
-                        choice = Console.ReadLine();
+                        displayChoice = int.Parse(Console.ReadLine());
                         Console.Clear();
 
-                        switch (choice)
+                        switch (displayChoice)
                         {
+                            case 1:
+                                DisplayAllProducts(db);
+                                break;
+
+                            case 2:
+                                DisplayActiveProducts(db);
+                                break;
+
+                            case 3:
+                                DisplayDiscontinuedProducts(db);
+                                break;
 
                             default:
+                                logger.Error("You didn't pick of the options");
+                                break;
+                            
                         }
 
                     }
@@ -240,7 +255,6 @@ namespace NorthwindConsole
 
         private static void DisplayAllProducts(NorthwindConsole_31_JEBContext db)
         {
-
             var query = db.Products.OrderBy(p => p.Discontinued);
             Console.WriteLine($"{query.Count()} records returned");
             Console.ForegroundColor = ConsoleColor.Magenta;
@@ -248,15 +262,43 @@ namespace NorthwindConsole
             {
                 if (item.Discontinued == true)
                 {
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine($"Product Name: {item.ProductName}");
-
-                }
-                else
-                {
                     Console.ForegroundColor = ConsoleColor.Blue;
                     Console.WriteLine($"Discontinued Product Name: {item.ProductName}");
                 }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine($"Active Product Name: {item.ProductName}");
+                }
+            }
+            Console.ForegroundColor = ConsoleColor.White;
+        }
+
+        private static void DisplayActiveProducts(NorthwindConsole_31_JEBContext db){
+
+            var query = db.Products.OrderBy(p => p.Discontinued).Where(p => p.Discontinued == false);
+            Console.WriteLine($"{query.Count()} records returned");
+            Console.ForegroundColor = ConsoleColor.Magenta;
+
+            foreach (var item in query)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine($"Product Name: {item.ProductName} - {item.Discontinued}");
+
+            }
+            Console.ForegroundColor = ConsoleColor.White;
+        } 
+
+        private static void DisplayDiscontinuedProducts(NorthwindConsole_31_JEBContext db){
+                        var query = db.Products.OrderBy(p => p.Discontinued).Where(p => p.Discontinued == true);
+            Console.WriteLine($"{query.Count()} records returned");
+            Console.ForegroundColor = ConsoleColor.Magenta;
+
+            foreach (var item in query)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine($"Product Name: {item.ProductName} - {item.Discontinued}");
+
             }
             Console.ForegroundColor = ConsoleColor.White;
         }

@@ -229,3 +229,22 @@
 2020-11-26 12:28:35.1235|INFO|NorthwindConsole.Program|Program started
 2020-11-26 12:28:37.6404|INFO|NorthwindConsole.Program|Option 3 selected
 2020-11-26 12:28:40.8897|INFO|NorthwindConsole.Program|CategoryId 9 selected
+2020-11-26 20:15:37.0318|INFO|NorthwindConsole.Program|Program started
+2020-11-26 20:15:46.5213|INFO|NorthwindConsole.Program|Program started
+2020-11-26 20:16:20.6952|INFO|NorthwindConsole.Program|Program started
+2020-11-26 20:16:23.9979|INFO|NorthwindConsole.Program|Option 6 selected
+2020-11-26 20:17:48.9200|INFO|NorthwindConsole.Program|Option 6 selected
+2020-11-26 20:18:55.3023|INFO|NorthwindConsole.Program|Program started
+2020-11-26 20:18:57.7827|INFO|NorthwindConsole.Program|Option 6 selected
+2020-11-26 20:19:09.7614|INFO|NorthwindConsole.Program|Option 6 selected
+2020-11-26 20:19:23.9346|INFO|NorthwindConsole.Program|Option 6 selected
+2020-11-26 20:24:31.1862|INFO|NorthwindConsole.Program|Program started
+2020-11-26 20:25:27.9964|INFO|NorthwindConsole.Program|Option 6 selected
+2020-11-26 20:26:10.3586|INFO|NorthwindConsole.Program|Program started
+2020-11-26 20:26:15.3644|INFO|NorthwindConsole.Program|Option 6 selected
+2020-11-26 20:28:15.0367|INFO|NorthwindConsole.Program|Program started
+2020-11-26 20:28:17.5806|INFO|NorthwindConsole.Program|Option 6 selected
+2020-11-26 20:29:29.2408|INFO|NorthwindConsole.Program|Program started
+2020-11-26 20:29:31.5447|INFO|NorthwindConsole.Program|Option 6 selected
+2020-11-26 20:29:41.6024|INFO|NorthwindConsole.Program|Option 6 selected
+2020-11-26 20:29:51.1564|INFO|NorthwindConsole.Program|Option 6 selected

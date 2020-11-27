@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\joshb\\Documents\\WCTC\\Fall-2020\\term2\\dotNet\\NorthwindConsole\\NorthwindConsole.csproj": {}
+    "C:\\Users\\joshb\\Documents\\School\\WCTC\\Fall-2020\\term2\\dotNet\\NorthwindConsole\\NorthwindConsole.csproj": {}
   },
   "projects": {
-    "C:\\Users\\joshb\\Documents\\WCTC\\Fall-2020\\term2\\dotNet\\NorthwindConsole\\NorthwindConsole.csproj": {
+    "C:\\Users\\joshb\\Documents\\School\\WCTC\\Fall-2020\\term2\\dotNet\\NorthwindConsole\\NorthwindConsole.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\joshb\\Documents\\WCTC\\Fall-2020\\term2\\dotNet\\NorthwindConsole\\NorthwindConsole.csproj",
+        "projectUniqueName": "C:\\Users\\joshb\\Documents\\School\\WCTC\\Fall-2020\\term2\\dotNet\\NorthwindConsole\\NorthwindConsole.csproj",
         "projectName": "NorthwindConsole",
-        "projectPath": "C:\\Users\\joshb\\Documents\\WCTC\\Fall-2020\\term2\\dotNet\\NorthwindConsole\\NorthwindConsole.csproj",
+        "projectPath": "C:\\Users\\joshb\\Documents\\School\\WCTC\\Fall-2020\\term2\\dotNet\\NorthwindConsole\\NorthwindConsole.csproj",
         "packagesPath": "C:\\Users\\joshb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\joshb\\Documents\\WCTC\\Fall-2020\\term2\\dotNet\\NorthwindConsole\\obj\\",
+        "outputPath": "C:\\Users\\joshb\\Documents\\School\\WCTC\\Fall-2020\\term2\\dotNet\\NorthwindConsole\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\joshb\\AppData\\Roaming\\NuGet\\NuGet.Config"
