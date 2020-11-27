@@ -222,14 +222,13 @@ namespace NorthwindConsole
                     {
 
                         Products product = new Products();
-
+                        DisplayAllProducts(db);
                         Console.WriteLine("Enter the id of the product you want to edit:");
                         product.ProductId = int.Parse(Console.ReadLine());
 
                         if (db.Products.Any(c => c.ProductId == product.ProductId))
                         {
-                            //TODO: need to first set everything to it's default or else it will be overwirted as null if I don't put anything in
-                            // product = db.Products.Where(c => c.ProductId == product.ProductId);
+                            product = db.Products.FirstOrDefault(c => c.ProductId == product.ProductId);
 
                             Console.WriteLine("Do you want to change the Product Name Y | N");
                             choice = Console.ReadLine().ToLower();
@@ -332,14 +331,13 @@ namespace NorthwindConsole
                     else if (choice == "8")
                     {
                         Categories category = new Categories();
-
+                        DisplayCategories(db);
                         Console.WriteLine("Enter the id of the category you want to edit:");
                         category.CategoryId = int.Parse(Console.ReadLine());
 
                         if (db.Categories.Any(c => c.CategoryId == category.CategoryId))
                         {
-                            //TODO: need to first set everything to it's default or else it will be overwirted as null if I don't put anything in
-                            // category = db.Categories.Where(c => c.CategoryId == category.CategoryId);
+                            category = db.Categories.FirstOrDefault(c => c.CategoryId == category.CategoryId);
 
                             Console.WriteLine("Do you want to change the Category Name Y | N");
                             choice = Console.ReadLine().ToLower();
@@ -413,7 +411,7 @@ namespace NorthwindConsole
 
         private static void DisplayAllProducts(NorthwindConsole_31_JEBContext db)
         {
-            var query = db.Products.OrderBy(p => p.Discontinued);
+            var query = db.Products.OrderBy(p => p.ProductId);
             Console.WriteLine($"{query.Count()} records returned");
             Console.ForegroundColor = ConsoleColor.Magenta;
             foreach (var item in query)
@@ -421,12 +419,12 @@ namespace NorthwindConsole
                 if (item.Discontinued == true)
                 {
                     Console.ForegroundColor = ConsoleColor.Blue;
-                    Console.WriteLine($"Discontinued Product Name: {item.ProductName}");
+                    Console.WriteLine($"Id: {item.ProductId} - Discontinued Product Name: {item.ProductName}");
                 }
                 else
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine($"Active Product Name: {item.ProductName}");
+                    Console.WriteLine($"Id: {item.ProductId} - Active Product Name: {item.ProductName}");
                 }
             }
             Console.ForegroundColor = ConsoleColor.White;
@@ -442,7 +440,7 @@ namespace NorthwindConsole
             foreach (var item in query)
             {
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine($"Product Name: {item.ProductName} - {item.Discontinued}");
+                Console.WriteLine($"Id: {item.ProductId} - Product Name: {item.ProductName} - {item.Discontinued}");
 
             }
             Console.ForegroundColor = ConsoleColor.White;
@@ -457,7 +455,7 @@ namespace NorthwindConsole
             foreach (var item in query)
             {
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine($"Product Name: {item.ProductName} - {item.Discontinued}");
+                Console.WriteLine($"Id: {item.ProductId} - Product Name: {item.ProductName} - {item.Discontinued}");
 
             }
             Console.ForegroundColor = ConsoleColor.White;
