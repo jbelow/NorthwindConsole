@@ -28,6 +28,21 @@ namespace NorthwindConsole.Model
         public virtual DbSet<Suppliers> Suppliers { get; set; }
         public virtual DbSet<Territories> Territories { get; set; }
 
+        public void EditProduct(Products db)
+        {
+            Products product = this.Products.Find(db.ProductId);
+            product.ProductName = db.ProductName;
+            product.SupplierId = db.SupplierId;
+            product.CategoryId = db.CategoryId;
+            product.QuantityPerUnit = db.QuantityPerUnit;
+            product.UnitPrice = db.UnitPrice;
+            product.UnitsInStock = db.UnitsInStock;
+            product.UnitsOnOrder = db.UnitsOnOrder;
+            product.ReorderLevel = db.ReorderLevel;
+            product.Discontinued = db.Discontinued;
+            this.SaveChanges();
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)

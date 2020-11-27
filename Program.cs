@@ -36,6 +36,7 @@ namespace NorthwindConsole
                     Console.WriteLine("4) Display all Categories and their related products");
                     Console.WriteLine("5) Add a new Product");
                     Console.WriteLine("6) Display Products");
+                    Console.WriteLine("7) Edit a Product");
                     Console.WriteLine("\"q\" to quit");
                     choice = Console.ReadLine();
                     Console.Clear();
@@ -181,6 +182,7 @@ namespace NorthwindConsole
 
 
                     }
+                    //Display Products
                     else if (choice == "6")
                     {
                         int displayChoice;
@@ -207,11 +209,41 @@ namespace NorthwindConsole
                             default:
                                 logger.Error("You didn't pick of the options");
                                 break;
-                            
+                        }
+                    }
+                    //Edit a Product
+                    else if (choice == "7") {
+                        //TODO: check to make sure the user doesn't enter null
+                        //finish the thing and link it with the method in Model/NorthwindConsole_31_JEBContext
+                        Products product = new Products();
+
+                        Console.WriteLine("Enter the id of the product you want to edit:");
+                        product.ProductId = int.Parse(Console.ReadLine());
+
+                        if (db.Products.Any(c => c.ProductId == product.ProductId))
+                        {
+                            Console.WriteLine("Do you want to change the Product Name Y | N");
+                            choice = Console.ReadLine().ToLower();
+                            if (choice == "y") {
+                                Console.WriteLine("Enter new name:");
+                                product.ProductName = Console.ReadLine();
+                            }
+
+                            Console.WriteLine("Do you want to change the Supplier Id Y | N");
+                            choice = Console.ReadLine().ToLower();
+                            if (choice == "y") {
+                                Console.WriteLine("Enter new name:");
+
+                            }
+
+
+                        }
+                        else
+                        {
+
                         }
 
                     }
-
                     Console.WriteLine();
 
                 } while (choice.ToLower() != "q");
@@ -290,7 +322,7 @@ namespace NorthwindConsole
         } 
 
         private static void DisplayDiscontinuedProducts(NorthwindConsole_31_JEBContext db){
-                        var query = db.Products.OrderBy(p => p.Discontinued).Where(p => p.Discontinued == true);
+            var query = db.Products.OrderBy(p => p.Discontinued).Where(p => p.Discontinued == true);
             Console.WriteLine($"{query.Count()} records returned");
             Console.ForegroundColor = ConsoleColor.Magenta;
 
@@ -302,6 +334,8 @@ namespace NorthwindConsole
             }
             Console.ForegroundColor = ConsoleColor.White;
         }
+
+
 
     }
 }
