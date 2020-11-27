@@ -212,7 +212,8 @@ namespace NorthwindConsole
                         }
                     }
                     //Edit a Product
-                    else if (choice == "7") {
+                    else if (choice == "7")
+                    {
                         //TODO: check to make sure the user doesn't enter null
                         //finish the thing and link it with the method in Model/NorthwindConsole_31_JEBContext
                         Products product = new Products();
@@ -224,23 +225,98 @@ namespace NorthwindConsole
                         {
                             Console.WriteLine("Do you want to change the Product Name Y | N");
                             choice = Console.ReadLine().ToLower();
-                            if (choice == "y") {
+                            if (choice == "y")
+                            {
                                 Console.WriteLine("Enter new name:");
                                 product.ProductName = Console.ReadLine();
                             }
 
                             Console.WriteLine("Do you want to change the Supplier Id Y | N");
                             choice = Console.ReadLine().ToLower();
-                            if (choice == "y") {
-                                Console.WriteLine("Enter new name:");
-
+                            if (choice == "y")
+                            {
+                                Console.WriteLine("Enter new Supplier Id:");
+                                product.SupplierId = int.Parse(Console.ReadLine());
                             }
 
+                            Console.WriteLine("Do you want to change the Category Id Y | N");
+                            choice = Console.ReadLine().ToLower();
+                            if (choice == "y")
+                            {
+                                Console.WriteLine("Enter new Category Id:");
+                                product.CategoryId = int.Parse(Console.ReadLine());
+                            }
+
+
+                            Console.WriteLine("Do you want to change the Quantiry Per Unit Y | N");
+                            choice = Console.ReadLine().ToLower();
+                            if (choice == "y")
+                            {
+                                Console.WriteLine("Enter new Quantiry Per Unit:");
+                                product.QuantityPerUnit = Console.ReadLine();
+                            }
+
+
+                            Console.WriteLine("Do you want to change the Unit Price Y | N");
+                            choice = Console.ReadLine().ToLower();
+                            if (choice == "y")
+                            {
+                                Console.WriteLine("Enter new Unit Price:");
+                                product.UnitPrice = decimal.Round(decimal.Parse(Console.ReadLine()), 2);
+                            }
+
+
+                            Console.WriteLine("Do you want to change the Units In Stock Y | N");
+                            choice = Console.ReadLine().ToLower();
+                            if (choice == "y")
+                            {
+                                Console.WriteLine("Enter new Units In Stock:");
+                                product.UnitsInStock = short.Parse(Console.ReadLine());
+                            }
+
+
+                            Console.WriteLine("Do you want to change the Units On Order Y | N");
+                            choice = Console.ReadLine().ToLower();
+                            if (choice == "y")
+                            {
+                                Console.WriteLine("Enter new Units On Order:");
+                                product.UnitsOnOrder = short.Parse(Console.ReadLine());
+                            }
+
+
+                            Console.WriteLine("Do you want to change the Reorder Level Y | N");
+                            choice = Console.ReadLine().ToLower();
+                            if (choice == "y")
+                            {
+                                Console.WriteLine("Enter new Reorder Level:");
+                                product.ReorderLevel = short.Parse(Console.ReadLine());
+                            }
+
+
+                            Console.WriteLine("Do you want to change the Discontinued Y | N");
+                            choice = Console.ReadLine().ToLower();
+                            if (choice == "y")
+                            {
+                                int isDiscontined;
+                                Console.WriteLine("Enter new Discontined (1 = true | 0 = false):");
+                                isDiscontined = int.Parse(Console.ReadLine());
+
+                                if (isDiscontined == 1)
+                                {
+                                    product.Discontinued = true;
+                                }
+                                else if (isDiscontined == 2)
+                                {
+                                    product.Discontinued = false;
+                                }
+                            }
+                            db.EditProduct(product);
+                            logger.Info($"Product {product.ProductId} has been updated!");
 
                         }
                         else
                         {
-
+                            logger.Error("The Product Id you entered does not exist.");
                         }
 
                     }
@@ -306,7 +382,8 @@ namespace NorthwindConsole
             Console.ForegroundColor = ConsoleColor.White;
         }
 
-        private static void DisplayActiveProducts(NorthwindConsole_31_JEBContext db){
+        private static void DisplayActiveProducts(NorthwindConsole_31_JEBContext db)
+        {
 
             var query = db.Products.OrderBy(p => p.Discontinued).Where(p => p.Discontinued == false);
             Console.WriteLine($"{query.Count()} records returned");
@@ -319,9 +396,10 @@ namespace NorthwindConsole
 
             }
             Console.ForegroundColor = ConsoleColor.White;
-        } 
+        }
 
-        private static void DisplayDiscontinuedProducts(NorthwindConsole_31_JEBContext db){
+        private static void DisplayDiscontinuedProducts(NorthwindConsole_31_JEBContext db)
+        {
             var query = db.Products.OrderBy(p => p.Discontinued).Where(p => p.Discontinued == true);
             Console.WriteLine($"{query.Count()} records returned");
             Console.ForegroundColor = ConsoleColor.Magenta;
