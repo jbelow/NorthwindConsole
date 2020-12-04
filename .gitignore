@@ -4,4 +4,3 @@ _ReSharper.*
 bin
 obj
 packages
-appsettings.json
