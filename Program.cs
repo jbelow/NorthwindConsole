@@ -347,7 +347,7 @@ namespace NorthwindConsole
                                 category.CategoryName = Console.ReadLine();
                             }
 
-                            Console.WriteLine("Do you want to change the Supplier Id Y | N");
+                            Console.WriteLine("Do you want to change the Discription Y | N");
                             choice = Console.ReadLine().ToLower();
                             if (choice == "y")
                             {
@@ -355,8 +355,7 @@ namespace NorthwindConsole
                                 category.Description = Console.ReadLine();
                             }
 
-                            //TODO make the edit
-                            // db.EditCategory(category);
+                            db.EditCategory(category);
                             logger.Info($"Category {category.CategoryId} has been updated!");
 
                         }

@@ -43,6 +43,14 @@ namespace NorthwindConsole.Model
             this.SaveChanges();
         }
 
+        public void EditCategory(Categories db)
+        {
+            Categories category = this.Categories.Find(db.CategoryId);
+            category.CategoryName = db.CategoryName;
+            category.CategoryName = db.CategoryName;
+            this.SaveChanges();
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
